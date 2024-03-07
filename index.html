@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant del Rayan</title>
+  
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .menu {
+      text-align: center;
+      padding: 20px;
+    }
+    .menu-item {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .menu-item:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h1>Restaurant del Rayan</h1>
+    <div class="menu-item" onclick="showMenu('breakfast')">Breakfast</div>
+    <div class="menu-item" onclick="showMenu('lunch')">Lunch</div>
+    <div class="menu-item" onclick="showMenu('dinner')">Dinner</div>
+    <div id="breakfastMenu" style="display: none;">
+      <h2>Breakfast Menu</h2>
+      <p>Pancakes,with mouth watering maple cirup and wallnuts</p>
+      <img src="pancake.jpeg" alt="pancakes">
+    </div>
+    <div id="lunchMenu" style="display: none;">
+      <h2>Lunch Menu</h2>
+      <p>Amazing mushroom soup with all kinds of spices</p>
+      <img src="mushroom.jpeg" alt="mushroom">
+    </div>
+    <div id="dinnerMenu" style="display: none;">
+      <h2>Dinner Menu</h2>
+      <p>delecious banana split with only the best ice-cream</p>
+      <img src="banana.jpeg" alt="banana">
+    </div>
+  </div>
+  <script>
+    function showMenu(menuType) {
+      document.getElementById('breakfastMenu').style.display = 'none';
+      document.getElementById('lunchMenu').style.display = 'none';
+      document.getElementById('dinnerMenu').style.display = 'none';
+      document.getElementById(menuType + 'Menu').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
